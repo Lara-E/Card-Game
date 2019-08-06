@@ -1,25 +1,75 @@
 .hearts {
     background-image: url("../images/hearts.jpg");
-    background-size: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+   
+}
+
+.hearts-flip {
+    background-image: url("../images/heartsflip.jpg");
+    background-size: contain;
+    
 }
 
 .spades {
     background-image: url("../images/spades.jpg");
-    background-size: 100%;
+    background-size: contain;
+}
+
+.spades-flip {
+    background-image: url("../images/spadesflip.jpg");
+    background-size: contain;
 }
 
 .clubs {
     background-image: url("../images/clubs.jpg");
-    background-size: 100%;
+    background-size: contain;
+}
+
+.clubs-flip {
+    background-image: url("../images/clubsflip.jpg");
+    background-size: contain;
 }
 
 .diamonds {
     background-image: url("../images/diamonds.jpg");
-    background-size: 100%;
+    background-size: contain;
 }
 
-.suit {
-    height: 100px;
-    width: 50px;
+.diamonds-flip {
+    background-image: url("../images/diamondsflip.jpg");
+    background-size: contain;
+}
+
+.suit, .flip {
+    height: 150px;
+    width: 160px;
     display: block;
 }
+
+.bottom {
+    -moz-transform:rotate(-180deg); /* Firefox */
+    -webkit-transform:rotate(-180deg); /* Webkit */        
+    -ms-transform:rotate(-180deg); /* IE */
+    -o-transform:rotate(-180deg); /* Opera */
+    transform:rotate(-180deg); /* future */
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 35px;
+}
+
+.card {
+    position: relative;
+    float: left;
+    margin: 20px;
+}
+
+.value {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    color: white;
+}
+
