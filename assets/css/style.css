@@ -1,6 +1,6 @@
 .hearts {
     background-image: url("../images/hearts.jpg");
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-size: cover; */
    
@@ -9,42 +9,56 @@
 .hearts-flip {
     background-image: url("../images/heartsflip.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     
 }
 
 .spades {
     background-image: url("../images/spades.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .spades-flip {
     background-image: url("../images/spadesflip.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .clubs {
     background-image: url("../images/clubs.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .clubs-flip {
     background-image: url("../images/clubsflip.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .diamonds {
     background-image: url("../images/diamonds.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .diamonds-flip {
     background-image: url("../images/diamondsflip.jpg");
     background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .suit, .flip {
-    height: 150px;
-    width: 160px;
+    height: 126px;
+    width: 180px;
     display: block;
 }
 
@@ -55,9 +69,10 @@
     -o-transform:rotate(-180deg); /* Opera */
     transform:rotate(-180deg); /* future */
     color: white;
+    font-size: 50px;
     position: absolute;
     bottom: 0px;
-    left: 35px;
+    left: 140px;
 }
 
 .card {
@@ -67,9 +82,10 @@
 }
 
 .value {
+    font-size: 50px;
     position: absolute;
     top: 0px;
-    left: 5px;
+    left: 13px;
     color: white;
 }
 
