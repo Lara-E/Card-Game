@@ -1,0 +1,25 @@
+.hearts {
+    background-image: url("../images/hearts.jpg");
+    background-size: 100%;
+}
+
+.spades {
+    background-image: url("../images/spades.jpg");
+    background-size: 100%;
+}
+
+.clubs {
+    background-image: url("../images/clubs.jpg");
+    background-size: 100%;
+}
+
+.diamonds {
+    background-image: url("../images/diamonds.jpg");
+    background-size: 100%;
+}
+
+.suit {
+    height: 100px;
+    width: 50px;
+    display: block;
+}
