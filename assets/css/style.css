@@ -1,65 +1,88 @@
-.hearts {
-    background-image: url("../images/hearts.jpg");
+.card[data-suit="hearts"][data-face="up"] {
+    background-image: url("../images/h.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-size: cover; */
    
 }
 
-.hearts-flip {
-    background-image: url("../images/heartsflip.jpg");
-    background-size: contain;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    
-}
-
-.spades {
-    background-image: url("../images/spades.jpg");
+.card[data-suit="spades"][data-face="up"] {
+    background-image: url("../images/s.jpg");
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.spades-flip {
-    background-image: url("../images/spadesflip.jpg");
+.card[data-suit="clubs"][data-face="up"] {
+    background-image: url("../images/c.jpg");
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.clubs {
-    background-image: url("../images/clubs.jpg");
+.card[data-suit="diamonds"][data-face="up"] {
+    background-image: url("../images/d.jpg");
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.clubs-flip {
-    background-image: url("../images/clubsflip.jpg");
+.card[data-face="down"] {
+    background-image: url("../images/back4.jpg");
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
 }
 
-.diamonds {
-    background-image: url("../images/diamonds.jpg");
-    background-size: contain;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+.card[data-face="down"] > .bottom {
+    visibility: hidden;
 }
 
-.diamonds-flip {
-    background-image: url("../images/diamondsflip.jpg");
-    background-size: contain;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+.card[data-face="down"] > .value {
+    visibility: hidden;
 }
 
-.suit, .flip {
-    height: 126px;
+.card {
+    height: 252px;
     width: 180px;
     display: block;
+    position: relative;
+    float: left;
+    margin: 20px;
+}
+
+#stock, 
+#waste,
+#holder,
+#foundation1,
+#foundation2,
+#foundation3,
+#foundation4,
+#tableau1,
+#tableau2,
+#tableau3,
+#tableau4,
+#tableau5,
+#tableau6,
+#tableau7 {
+    height: 252px;
+    width: 180px;
+    /* display: block;
+    float: left; */
+    background-color: blueviolet;
+    /* margin: 15px; */
+}
+
+#row1,
+#row2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#row1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .bottom {
@@ -72,13 +95,8 @@
     font-size: 50px;
     position: absolute;
     bottom: 0px;
-    left: 140px;
-}
-
-.card {
-    position: relative;
-    float: left;
-    margin: 20px;
+    left: 130px;
+    text-align: right;
 }
 
 .value {
