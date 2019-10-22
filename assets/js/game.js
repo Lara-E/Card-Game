@@ -27,11 +27,11 @@ function shuffle() {
 		deck[location1] = deck[location2];
 		deck[location2] = tmp;
 	}
-	renderDeck();
+	startDeck();
 }
 
-function renderDeck() {
-	document.getElementById("stock").innerHTML = "";
+function startDeck() {
+	// document.getElementById("stock").innerHTML = "";
 	var tableau1 = document.getElementById("tableau1");
 	var tableau2 = document.getElementById("tableau2");
 	var tableau3 = document.getElementById("tableau3");
@@ -42,62 +42,35 @@ function renderDeck() {
 	var stock = document.getElementById("stock");
 
 	for (var i = 0; i < deck.length; i++) {
-		var card = document.createElement("div");
-		var value = document.createElement("div");
-		var bottom = document.createElement("div");
-		card.className = "card";
-		card.className= "hide";
-		card.setAttribute("data-suit", deck[i].Suit);
-		card.setAttribute("data-value", deck[i].Value);
-		value.className = "value";
-		bottom.className = "bottom";
-		value.innerHTML = deck[i].Value;
-		bottom.innerHTML = deck[i].Value;
-		card.appendChild(value);
-		card.appendChild(bottom);
-
-		// document.getElementById("stock").appendChild(card);
 
 		switch (i) {
 			case 0:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau1.appendChild(card);
+				deal(deck[i], "up", "down", tableau1);
 				break;
 			case 1:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau2.appendChild(card);
+				deal(deck[i], "down", "up", tableau2, i);
 				break;
 			case 2:
 			case 8:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau3.appendChild(card);
+				deal(deck[i], "down", "up", tableau3, i);
 				break;
 			case 3:
 			case 9:
 			case 14:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau4.appendChild(card);
+				deal(deck[i], "down", "up", tableau4, i);
 				break;
 			case 4:
 			case 10:
 			case 15:
 			case 19:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau5.appendChild(card);
+				deal(deck[i], "down", "up", tableau5, i);
 				break;
 			case 5:
 			case 11:
 			case 16:
 			case 20:
 			case 23:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau6.appendChild(card);
+				deal(deck[i], "down", "up", tableau6, i);
 				break;
 			case 6:
 			case 12:
@@ -105,55 +78,60 @@ function renderDeck() {
 			case 21:
 			case 24:
 			case 26:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				tableau7.appendChild(card);
+				deal(deck[i], "down", "up", tableau7, i);
 				break;
 			case 7:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau2.appendChild(card);
+				deal(deck[i], "up", "down", tableau2, i);
 				break;
 			case 13:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau3.appendChild(card);
+				deal(deck[i], "up", "down", tableau3, i);
 				break;
 			case 18:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau4.appendChild(card);
+				deal(deck[i], "up", "down", tableau4, i);
 				break;
 			case 22:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau5.appendChild(card);
+				deal(deck[i], "up", "down", tableau5, i);
 				break;
 			case 25:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau6.appendChild(card);
+				deal(deck[i], "up", "down", tableau6, i);
 				break;
 			case 27:
-				card.setAttribute("data-face", "up");
-				card.setAttribute("data-holder", "down");
-				tableau7.appendChild(card);
+				deal(deck[i], "up", "down", tableau7, i);
 				break;
 			default:
-				card.setAttribute("data-face", "down");
-				card.setAttribute("data-holder", "up");
-				stock.appendChild(card);
+				deal(deck[i], "down", "up", stock, i);
 		}
-		
+
 		setClick();
 	}
-	//call deal function here
+	console.log(tableau6)
+	console.log(tableau1)
+}
+
+function deal(deck, face, holder, position, z) {
+	var card = document.createElement("div");
+	var value = document.createElement("div");
+	var bottom = document.createElement("div");
+	card.className = "card";
+	card.setAttribute("data-suit", deck.Suit);
+	card.setAttribute("data-value", deck.Value);
+	value.className = "value";
+	bottom.className = "bottom";
+	value.innerHTML = deck.Value;
+	bottom.innerHTML = deck.Value;
+	card.appendChild(value);
+	card.appendChild(bottom);
+	card.setAttribute("data-face", face);
+	card.setAttribute("data-holder", holder);
+	position.appendChild(card);
+	// card.style.zIndex = z;
 }
 
 
 getDeck();
 shuffle();
-renderDeck();
+// startDeck();
+console.log(deck)
 
 document.getElementById("shuffle").addEventListener("click", function(event) {
 	console.log("clicked")
