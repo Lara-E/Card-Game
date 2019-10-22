@@ -39,23 +39,14 @@ function renderDeck() {
 	var tableau5 = document.getElementById("tableau5");
 	var tableau6 = document.getElementById("tableau6");
 	var tableau7 = document.getElementById("tableau7");
-	var stockEl = document.getElementById("stock");
-	var tabOneArr = [];
-	var tabTwoArr = [];
-	var tabThreeArr = [];
-	var tabFourArr = [];
-	var tabFiveArr = [];
-	var tabSixArr = [];
-	var tabSevenArr = [];
-	var stock = [];
-
-
+	var stock = document.getElementById("stock");
 
 	for (var i = 0; i < deck.length; i++) {
 		var card = document.createElement("div");
 		var value = document.createElement("div");
 		var bottom = document.createElement("div");
 		card.className = "card";
+		card.className= "hide";
 		card.setAttribute("data-suit", deck[i].Suit);
 		card.setAttribute("data-value", deck[i].Value);
 		value.className = "value";
@@ -65,26 +56,23 @@ function renderDeck() {
 		card.appendChild(value);
 		card.appendChild(bottom);
 
-		document.getElementById("stock").appendChild(card);
+		// document.getElementById("stock").appendChild(card);
 
 		switch (i) {
 			case 0:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabOneArr.push(card);
 				tableau1.appendChild(card);
 				break;
 			case 1:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabTwoArr.push(card);
 				tableau2.appendChild(card);
 				break;
 			case 2:
 			case 8:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabThreeArr.push(card);
 				tableau3.appendChild(card);
 				break;
 			case 3:
@@ -92,7 +80,6 @@ function renderDeck() {
 			case 14:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabFourArr.push(card);
 				tableau4.appendChild(card);
 				break;
 			case 4:
@@ -101,7 +88,6 @@ function renderDeck() {
 			case 19:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabFiveArr.push(card);
 				tableau5.appendChild(card);
 				break;
 			case 5:
@@ -111,7 +97,6 @@ function renderDeck() {
 			case 23:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabSixArr.push(card);
 				tableau6.appendChild(card);
 				break;
 			case 6:
@@ -122,65 +107,47 @@ function renderDeck() {
 			case 26:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				tabSevenArr.push(card);
 				tableau7.appendChild(card);
 				break;
 			case 7:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabTwoArr.push(card);
 				tableau2.appendChild(card);
 				break;
 			case 13:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabThreeArr.push(card);
 				tableau3.appendChild(card);
 				break;
 			case 18:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabFourArr.push(card);
 				tableau4.appendChild(card);
 				break;
 			case 22:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabFiveArr.push(card);
 				tableau5.appendChild(card);
 				break;
 			case 25:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabSixArr.push(card);
 				tableau6.appendChild(card);
 				break;
 			case 27:
 				card.setAttribute("data-face", "up");
 				card.setAttribute("data-holder", "down");
-				tabSevenArr.push(card);
 				tableau7.appendChild(card);
 				break;
 			default:
 				card.setAttribute("data-face", "down");
 				card.setAttribute("data-holder", "up");
-				stock.push(card);
-				stockEl.appendChild(card);
+				stock.appendChild(card);
 		}
 		
 		setClick();
 	}
-
-	// console.log(tabOneArr[tabOneArr.length -1]);
-	// console.log(tabTwoArr[tabTwoArr.length -1]);
-	// console.log(tabThreeArr[tabThreeArr.length -1]);
-	// console.log(tabFourArr[tabFourArr.length -1]);
-	// console.log(tabFiveArr)[tabFiveArr.length -1];
-	// for (var i = 0; i < tabFiveArr.length; i++) {
-
-		console.log(tabFiveArr);
-	// }
-	// console.log(tabSevenArr[tabSevenArr.length -1]);
+	//call deal function here
 }
 
 
