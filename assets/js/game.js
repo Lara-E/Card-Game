@@ -40,12 +40,14 @@ function startDeck() {
 	var tableau6 = document.getElementById("tableau6");
 	var tableau7 = document.getElementById("tableau7");
 	var stock = document.getElementById("stock");
+	var t1 = document.getElementById("t1p0");
+	var t2 = document.getElementById("t1p1");
 
 	for (var i = 0; i < deck.length; i++) {
 
 		switch (i) {
 			case 0:
-				deal(deck[i], "up", "down", tableau1);
+				deal(deck[i], "up", "down", t1);
 				break;
 			case 1:
 				deal(deck[i], "down", "up", tableau2, i);
@@ -81,7 +83,7 @@ function startDeck() {
 				deal(deck[i], "down", "up", tableau7, i);
 				break;
 			case 7:
-				deal(deck[i], "up", "down", tableau2, i);
+				deal(deck[i], "up", "down", t2, i);
 				break;
 			case 13:
 				deal(deck[i], "up", "down", tableau3, i);
