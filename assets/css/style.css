@@ -50,13 +50,14 @@
     position: relative;
     float: left;
     margin: 20px;
+    border: 1px solid white;
 }
 
 .hide {
     display: none;
 }
 
-#stock, 
+
 #waste,
 #holder,
 #foundation1,
@@ -73,7 +74,7 @@
     /* height: 252px;
     width: 180px;
     display: block; */
-    float: left;
+    /* float: left; */
     font-size: 30px;
     /* background-color: blueviolet; */
     /* margin: 15px; */
@@ -89,6 +90,7 @@
 #row1 {
     margin-top: 30px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .bottom {
@@ -113,17 +115,93 @@
     color: white;
 }
 
-#t1p1, 
-#t2p1, 
-#t3p1, 
-#t4p1,
-#t5p1,
-#t6p1,
-#t7p1 {
+.deal-wrap {
+    position: relative;
+}
+
+#stock {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#t1p1,
+#d2p1, 
+#d3p1, 
+#d4p1,
+#d5p1,
+#d6p1,
+#d7p1 {
     height: 252px;
     width: 180px;
     position: absolute;
     top: 0px;
+    left: 0;
+}
+
+#t2p1,
+#d3p2, 
+#d4p2, 
+#d5p2,
+#d6p2,
+#d7p2 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+#t3p1,
+#d4p3, 
+#d5p3,
+#d6p3,
+#d7p3 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+#t4p1,
+#d5p4,
+#d6p4,
+#d7p4 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+
+#t5p1,
+#d6p5,
+#d7p5 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+#t6p1,
+#d7p6 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 75px;
+    left: 0;
+}
+
+#t7p1 {
+    height: 252px;
+    width: 180px;
+    position: absolute;
+    top: 90px;
     left: 0;
 }
 

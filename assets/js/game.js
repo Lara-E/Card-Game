@@ -32,76 +32,135 @@ function shuffle() {
 
 function startDeck() {
 	// document.getElementById("stock").innerHTML = "";
-	var tableau1 = document.getElementById("tableau1");
-	var tableau2 = document.getElementById("tableau2");
-	var tableau3 = document.getElementById("tableau3");
-	var tableau4 = document.getElementById("tableau4");
-	var tableau5 = document.getElementById("tableau5");
-	var tableau6 = document.getElementById("tableau6");
-	var tableau7 = document.getElementById("tableau7");
+	var t1p1 = document.getElementById("t1p1");
+	var d2p1 = document.getElementById("d2p1");
+	var d3p1 = document.getElementById("d3p1");
+	var d4p1 = document.getElementById("d4p1");
+	var d5p1 = document.getElementById("d5p1");
+	var d6p1 = document.getElementById("d6p1");
+	var d7p1 = document.getElementById("d7p1");
+	var t2p1 = document.getElementById("t2p1");
+	var d3p2 = document.getElementById("d3p2");
+	var d4p2 = document.getElementById("d4p2");
+	var d5p2 = document.getElementById("d5p2");
+	var d6p2 = document.getElementById("d6p2");
+	var d7p2 = document.getElementById("d7p2");
+	var t3p1 = document.getElementById("t3p1");
+	var d4p3 = document.getElementById("d4p3");
+	var d5p3 = document.getElementById("d5p3");
+	var d6p3 = document.getElementById("d6p3");
+	var d7p3 = document.getElementById("d7p3");
+	var t4p1 = document.getElementById("t4p1");
+	var d5p4 = document.getElementById("d5p4");
+	var d6p4 = document.getElementById("d6p4");
+	var d7p4 = document.getElementById("d7p4");
+	var t5p1 = document.getElementById("t5p1");
+	var d6p5 = document.getElementById("d6p5");
+	var d7p5 = document.getElementById("d7p5");
+	var t6p1 = document.getElementById("t6p1");
+	var d7p6 = document.getElementById("d7p6");
+	var t7p1 = document.getElementById("t7p1");
+
+
+
+
+
+
+
+
+
+
 	var stock = document.getElementById("stock");
-	var t1 = document.getElementById("t1p0");
-	var t2 = document.getElementById("t1p1");
 
 	for (var i = 0; i < deck.length; i++) {
 
 		switch (i) {
 			case 0:
-				deal(deck[i], "up", "down", t1);
+				deal(deck[i], "up", "down", t1p1);
 				break;
 			case 1:
-				deal(deck[i], "down", "up", tableau2, i);
+				deal(deck[i], "down", "up", d2p1);
 				break;
 			case 2:
-			case 8:
-				deal(deck[i], "down", "up", tableau3, i);
+				deal(deck[i], "down", "up", d3p1);
 				break;
 			case 3:
-			case 9:
-			case 14:
-				deal(deck[i], "down", "up", tableau4, i);
+				deal(deck[i], "down", "up", d4p1);
 				break;
 			case 4:
-			case 10:
-			case 15:
-			case 19:
-				deal(deck[i], "down", "up", tableau5, i);
+				deal(deck[i], "down", "up", d5p1);
 				break;
 			case 5:
-			case 11:
-			case 16:
-			case 20:
-			case 23:
-				deal(deck[i], "down", "up", tableau6, i);
+				deal(deck[i], "down", "up", d6p1);
 				break;
 			case 6:
-			case 12:
-			case 17:
-			case 21:
-			case 24:
-			case 26:
-				deal(deck[i], "down", "up", tableau7, i);
+				deal(deck[i], "down", "up", d7p1);
 				break;
 			case 7:
-				deal(deck[i], "up", "down", t2, i);
+				deal(deck[i], "up", "down", t2p1);
+				break;
+			case 8:
+				deal(deck[i], "down", "up", d3p2);
+				break;
+			case 9:
+				deal(deck[i], "down", "up", d4p2);
+				break;
+			case 10:
+				deal(deck[i], "down", "up", d5p2);
+				break;
+			case 11:
+				deal(deck[i], "down", "up", d6p2);
+				break;
+			case 12:
+				deal(deck[i], "down", "up", d7p2);
 				break;
 			case 13:
-				deal(deck[i], "up", "down", tableau3, i);
+				deal(deck[i], "up", "down", t3p1);
+				break;
+			case 14:
+				deal(deck[i], "down", "up", d4p3);
+				break;
+			case 15:
+				deal(deck[i], "down", "up", d5p3);
+				break;
+			case 16:
+				deal(deck[i], "down", "up", d6p3);
+				break;
+			case 17:
+				deal(deck[i], "down", "up", d7p3);
 				break;
 			case 18:
-				deal(deck[i], "up", "down", tableau4, i);
+				deal(deck[i], "up", "down", t4p1);
+				break;
+			case 19:
+				deal(deck[i], "down", "up", d5p4);
+				break;
+			case 20:
+				deal(deck[i], "down", "up", d6p4);
+				break;
+			case 21:
+				deal(deck[i], "down", "up", d7p4);
 				break;
 			case 22:
-				deal(deck[i], "up", "down", tableau5, i);
+				deal(deck[i], "up", "down", t5p1);
+				break;
+			case 23:
+				deal(deck[i], "down", "up", d6p5);
+				break;
+			case 24:
+				deal(deck[i], "down", "up", d7p5);
 				break;
 			case 25:
-				deal(deck[i], "up", "down", tableau6, i);
+				deal(deck[i], "up", "down", t6p1);
+				break;
+			case 26:
+				deal(deck[i], "down", "up", d7p6);
 				break;
 			case 27:
-				deal(deck[i], "up", "down", tableau7, i);
+				deal(deck[i], "up", "down", t7p1);
 				break;
 			default:
-				deal(deck[i], "down", "up", stock, i);
+				deal(deck[i], "down", "up", stock);
 		}
 
 		setClick();
@@ -110,7 +169,7 @@ function startDeck() {
 	console.log(tableau1)
 }
 
-function deal(deck, face, holder, position, z) {
+function deal(deck, face, holder, position) {
 	var card = document.createElement("div");
 	var value = document.createElement("div");
 	var bottom = document.createElement("div");
