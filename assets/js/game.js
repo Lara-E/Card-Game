@@ -17,9 +17,9 @@ function getDeck() {
 
 function shuffle() {
 	console.log("shuffling")
-	// for 1000 turns
+	// for 750 turns
 	// switch the values of two random cards
-	for (var i = 0; i < 1000; i++) {
+	for (var i = 0; i < 750; i++) {
 		var location1 = Math.floor((Math.random() * deck.length));
 		var location2 = Math.floor((Math.random() * deck.length));
 		var tmp = deck[location1];
@@ -31,7 +31,6 @@ function shuffle() {
 }
 
 function startDeck() {
-	// document.getElementById("stock").innerHTML = "";
 	var t1p1 = document.getElementById("t1p1");
 	var d2p1 = document.getElementById("d2p1");
 	var d3p1 = document.getElementById("d3p1");
@@ -60,104 +59,94 @@ function startDeck() {
 	var t6p1 = document.getElementById("t6p1");
 	var d7p6 = document.getElementById("d7p6");
 	var t7p1 = document.getElementById("t7p1");
-
-
-
-
-
-
-
-
-
-
 	var stock = document.getElementById("stock");
 
 	for (var i = 0; i < deck.length; i++) {
 
 		switch (i) {
 			case 0:
-				deal(deck[i], "up", "down", t1p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t1p1);
 				break;
 			case 1:
-				deal(deck[i], "down", "up", d2p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d2p1);
 				break;
 			case 2:
-				deal(deck[i], "down", "up", d3p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d3p1);
 				break;
 			case 3:
-				deal(deck[i], "down", "up", d4p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d4p1);
 				break;
 			case 4:
-				deal(deck[i], "down", "up", d5p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d5p1);
 				break;
 			case 5:
-				deal(deck[i], "down", "up", d6p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d6p1);
 				break;
 			case 6:
-				deal(deck[i], "down", "up", d7p1);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p1);
 				break;
 			case 7:
-				deal(deck[i], "up", "down", t2p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t2p1);
 				break;
 			case 8:
-				deal(deck[i], "down", "up", d3p2);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d3p2);
 				break;
 			case 9:
-				deal(deck[i], "down", "up", d4p2);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d4p2);
 				break;
 			case 10:
-				deal(deck[i], "down", "up", d5p2);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d5p2);
 				break;
 			case 11:
-				deal(deck[i], "down", "up", d6p2);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d6p2);
 				break;
 			case 12:
-				deal(deck[i], "down", "up", d7p2);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p2);
 				break;
 			case 13:
-				deal(deck[i], "up", "down", t3p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t3p1);
 				break;
 			case 14:
-				deal(deck[i], "down", "up", d4p3);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d4p3);
 				break;
 			case 15:
-				deal(deck[i], "down", "up", d5p3);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d5p3);
 				break;
 			case 16:
-				deal(deck[i], "down", "up", d6p3);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d6p3);
 				break;
 			case 17:
-				deal(deck[i], "down", "up", d7p3);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p3);
 				break;
 			case 18:
-				deal(deck[i], "up", "down", t4p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t4p1);
 				break;
 			case 19:
-				deal(deck[i], "down", "up", d5p4);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d5p4);
 				break;
 			case 20:
-				deal(deck[i], "down", "up", d6p4);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d6p4);
 				break;
 			case 21:
-				deal(deck[i], "down", "up", d7p4);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p4);
 				break;
 			case 22:
-				deal(deck[i], "up", "down", t5p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t5p1);
 				break;
 			case 23:
-				deal(deck[i], "down", "up", d6p5);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d6p5);
 				break;
 			case 24:
-				deal(deck[i], "down", "up", d7p5);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p5);
 				break;
 			case 25:
-				deal(deck[i], "up", "down", t6p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t6p1);
 				break;
 			case 26:
-				deal(deck[i], "down", "up", d7p6);
+				setTimeout(deal, 750 * i, deck[i], "down", "up", d7p6);
 				break;
 			case 27:
-				deal(deck[i], "up", "down", t7p1);
+				setTimeout(deal, 750 * i, deck[i], "up", "down", t7p1);
 				break;
 			default:
 				deal(deck[i], "down", "up", stock);
@@ -190,15 +179,21 @@ function deal(deck, face, holder, position) {
 
 
 getDeck();
-shuffle();
+// shuffle();
 // startDeck();
 console.log(deck)
 
-document.getElementById("shuffle").addEventListener("click", function(event) {
-	console.log("clicked")
-	event.preventDefault();
+// document.getElementById("shuffle").addEventListener("click", function(event) {
+// 	console.log("clicked")
+// 	event.preventDefault();
+// 	shuffle();
+// });
+
+document.getElementById("deal").addEventListener("click", function() {
+	// window.location.reload();
+
 	shuffle();
-});
+})
 
 
 function logData() {

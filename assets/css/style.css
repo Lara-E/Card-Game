@@ -57,7 +57,6 @@
     display: none;
 }
 
-
 #waste,
 #holder,
 #foundation1,
@@ -85,6 +84,7 @@
 #row2 {
     display: flex;
     justify-content: space-around;
+    width: 1400px;
 }
 
 #row1 {
